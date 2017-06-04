@@ -1,8 +1,8 @@
 package abstract_factory;
 
 import abstract_factory.factories.AbstractWidgetFactory;
-import abstract_factory.scrollbar.ScrollBar;
-import abstract_factory.window.Window;
+import abstract_factory.scrollbar.AbstractScrollBar;
+import abstract_factory.window.AbstractWindow;
 
 /**
  * @author David Lei (david.anthony.lei@gmail.com)
@@ -13,8 +13,8 @@ public class ApplicationClient {
     public ApplicationClient() {}
 
        public void createWidget(AbstractWidgetFactory factory) {
-           Window w = factory.createWindow();
-           ScrollBar s = factory.createScrollBar();
+           AbstractWindow w = factory.createWindow();
+           AbstractScrollBar s = factory.createScrollBar();
 
            System.out.println("Client created: " + w.getDescription() + ", " + s.getDescription());
        }

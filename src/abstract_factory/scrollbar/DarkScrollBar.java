@@ -5,7 +5,7 @@ package abstract_factory.scrollbar;
  * @since 4/06/2017
  */
 
-public class DarkScrollBar extends ScrollBar{
+public class DarkScrollBar extends AbstractScrollBar {
 
     public DarkScrollBar() {
         this.description = "Dark scrollbar";

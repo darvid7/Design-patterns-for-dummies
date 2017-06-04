@@ -1,9 +1,9 @@
 package abstract_factory.factories;
 
 import abstract_factory.scrollbar.LightScrollBar;
-import abstract_factory.scrollbar.ScrollBar;
+import abstract_factory.scrollbar.AbstractScrollBar;
+import abstract_factory.window.AbstractWindow;
 import abstract_factory.window.LightWindow;
-import abstract_factory.window.Window;
 
 /**
  * @author David Lei (david.anthony.lei@gmail.com)
@@ -14,11 +14,11 @@ public class ConcreteLightWidgetFactory extends AbstractWidgetFactory {
 
     public ConcreteLightWidgetFactory() {}
 
-    public Window createWindow() {
+    public AbstractWindow createWindow() {
         return new LightWindow();
     }
 
-    public ScrollBar createScrollBar() {
+    public AbstractScrollBar createScrollBar() {
         return new LightScrollBar();
 
     }

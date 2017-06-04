@@ -5,7 +5,7 @@ package abstract_factory.scrollbar;
  * @since 4/06/2017
  */
 
-public class LightScrollBar extends ScrollBar{
+public class LightScrollBar extends AbstractScrollBar {
 
     public LightScrollBar() {
         this.description = "Light scrollbar";

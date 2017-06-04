@@ -5,10 +5,10 @@ package abstract_factory.window;
  * @since 4/06/2017
  */
 
-public class LightWindow extends Window {
+public class LightWindow extends AbstractWindow {
 
     public LightWindow() {
-        this.description = "Light Window";
+        this.description = "Light AbstractWindow";
 
     }
 

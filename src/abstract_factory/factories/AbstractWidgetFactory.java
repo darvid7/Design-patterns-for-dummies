@@ -1,7 +1,7 @@
 package abstract_factory.factories;
 
-import abstract_factory.scrollbar.ScrollBar;
-import abstract_factory.window.Window;
+import abstract_factory.scrollbar.AbstractScrollBar;
+import abstract_factory.window.AbstractWindow;
 
 /**
  * @author David Lei (david.anthony.lei@gmail.com)
@@ -9,6 +9,6 @@ import abstract_factory.window.Window;
  */
 
 public abstract class AbstractWidgetFactory {
-    public abstract Window createWindow();
-    public abstract ScrollBar createScrollBar();
+    public abstract AbstractWindow createWindow();
+    public abstract AbstractScrollBar createScrollBar();
 }

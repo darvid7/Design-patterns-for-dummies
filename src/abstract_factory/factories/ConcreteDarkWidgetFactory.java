@@ -1,9 +1,9 @@
 package abstract_factory.factories;
 
 import abstract_factory.scrollbar.DarkScrollBar;
-import abstract_factory.scrollbar.ScrollBar;
+import abstract_factory.scrollbar.AbstractScrollBar;
 import abstract_factory.window.DarkWindow;
-import abstract_factory.window.Window;
+import abstract_factory.window.AbstractWindow;
 
 /**
  * @author David Lei (david.anthony.lei@gmail.com)
@@ -14,11 +14,11 @@ public class ConcreteDarkWidgetFactory extends AbstractWidgetFactory {
 
     public ConcreteDarkWidgetFactory() {}
 
-    public Window createWindow() {
+    public AbstractWindow createWindow() {
         return new DarkWindow();
     }
 
-    public ScrollBar createScrollBar() {
+    public AbstractScrollBar createScrollBar() {
         return new DarkScrollBar();
 
     }
