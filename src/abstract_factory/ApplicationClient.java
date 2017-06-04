@@ -12,10 +12,10 @@ import abstract_factory.window.AbstractWindow;
 public class ApplicationClient {
     public ApplicationClient() {}
 
-       public void createWidget(AbstractWidgetFactory factory) {
-           AbstractWindow w = factory.createWindow();
-           AbstractScrollBar s = factory.createScrollBar();
+    public void createWidget(AbstractWidgetFactory factory) {
+        AbstractWindow w = factory.createWindow();
+        AbstractScrollBar s = factory.createScrollBar();
 
-           System.out.println("Client created: " + w.getDescription() + ", " + s.getDescription());
-       }
+        System.out.println("Client created: " + w.getDescription() + ", " + s.getDescription());
+    }
 }
