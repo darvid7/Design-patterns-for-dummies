@@ -12,10 +12,14 @@ import abstract_factory.window.AbstractWindow;
 public class ApplicationClient {
     public ApplicationClient() {}
 
-    public void createWidget(AbstractWidgetFactory factory) {
+    public ConcreteWidget createWidget(AbstractWidgetFactory factory) {
+        // Even though the window and scrollbar is either dark or light we don't care as we
+        // treat it as it's base class (upper most class in the hierarchy).
         AbstractWindow w = factory.createWindow();
         AbstractScrollBar s = factory.createScrollBar();
 
-        System.out.println("Client created: " + w.getDescription() + ", " + s.getDescription());
+        ConcreteWidget widget = new ConcreteWidget(s, w);
+        System.out.println("Client created: " + widget.getDescription());
+        return widget;
     }
 }

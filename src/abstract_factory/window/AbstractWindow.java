@@ -6,7 +6,7 @@ package abstract_factory.window;
  */
 
 public abstract class AbstractWindow {
-    protected String description = "AbstractWindow";
+    protected String description = "window";
 
     public String getDescription() {
         return this.description;

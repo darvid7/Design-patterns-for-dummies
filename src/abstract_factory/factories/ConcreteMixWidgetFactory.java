@@ -1,6 +1,6 @@
 package abstract_factory.factories;
 
-import abstract_factory.scrollbar.LightScrollBar;
+import abstract_factory.scrollbar.DarkScrollBar;
 import abstract_factory.window.LightWindow;
 
 /**
@@ -8,16 +8,16 @@ import abstract_factory.window.LightWindow;
  * @since 4/06/2017
  */
 
-public class ConcreteLightWidgetFactory extends AbstractWidgetFactory {
+public class ConcreteMixWidgetFactory extends AbstractWidgetFactory {
 
-    public ConcreteLightWidgetFactory() {}
+    public ConcreteMixWidgetFactory() {}
 
     public LightWindow createWindow() {
         return new LightWindow();
     }
 
-    public LightScrollBar createScrollBar() {
-        return new LightScrollBar();
+    public DarkScrollBar createScrollBar() {
+        return new DarkScrollBar();
 
     }
 }

@@ -3,7 +3,9 @@ package abstract_factory;
 import abstract_factory.factories.AbstractWidgetFactory;
 import abstract_factory.factories.ConcreteDarkWidgetFactory;
 import abstract_factory.factories.ConcreteLightWidgetFactory;
+import abstract_factory.factories.ConcreteMixWidgetFactory;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -14,12 +16,17 @@ import java.util.Random;
 public class Driver {
     public static void main(String[] args) {
         ApplicationClient app = new ApplicationClient();
+        ArrayList<ConcreteWidget> myWidgets = new ArrayList<>();
 
         AbstractWidgetFactory currentFactory = new ConcreteDarkWidgetFactory();
-        app.createWidget(currentFactory);
+        ConcreteWidget newWidget =  app.createWidget(currentFactory);
+        myWidgets.add(newWidget);
 
         AbstractWidgetFactory anotherFactory = new ConcreteLightWidgetFactory();
-        app.createWidget(anotherFactory);
+        ConcreteWidget anotherWidget = app.createWidget(anotherFactory);
+        myWidgets.add(anotherWidget);
+
+        // Lets say a widget is composed of a scrollbar and window.
 
         // At run time can randomize which factory it uses and it should work fine.
         // This is because we use dependency inversion to make it rely on the high level abstractions
@@ -30,17 +37,22 @@ public class Driver {
 
         Random generator = new Random();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             int j = generator. nextInt();
 
             System.out.println("Iteration: " + i);
             if (j % 2 == 0) {
                 // Is even;
-                app.createWidget(new ConcreteLightWidgetFactory());
+                myWidgets.add(app.createWidget(new ConcreteLightWidgetFactory()));
             } else {
-                app.createWidget(new ConcreteDarkWidgetFactory());
+                myWidgets.add(app.createWidget(new ConcreteDarkWidgetFactory()));
             }
         }
+        // Mixed widget was added really easily.
+        ConcreteWidget mixedWidget = app.createWidget(new ConcreteMixWidgetFactory());
+        myWidgets.add(mixedWidget);
+
+        System.out.println("Created: " + myWidgets.size() + " widgets");
 
     }
 }
