@@ -1,4 +1,4 @@
-package observer.listener.ObserverAsListenerInterface;
+package observer.listener.observerAsListenerInterface;
 
 import java.util.ArrayList;
 

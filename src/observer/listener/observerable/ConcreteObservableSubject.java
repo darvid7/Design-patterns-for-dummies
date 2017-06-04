@@ -1,6 +1,6 @@
 package observer.listener.observerable;
 
-import observer.listener.ObserverAsListenerInterface.OnChangeObserverCallback;
+import observer.listener.observerAsListenerInterface.OnChangeObserverCallback;
 
 /**
  * @author David Lei (david.anthony.lei@gmail.com)

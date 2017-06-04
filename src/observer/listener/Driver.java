@@ -1,6 +1,6 @@
 package observer.listener;
 
-import observer.listener.ObserverAsListenerInterface.OnChangeObserverCallback;
+import observer.listener.observerAsListenerInterface.OnChangeObserverCallback;
 import observer.listener.observerable.ConcreteObservableSubject;
 
 import java.util.ArrayList;
